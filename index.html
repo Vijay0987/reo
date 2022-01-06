@@ -1,0 +1,121 @@
+<style type="text/css">
+  body{
+    border: 5px double firebrick;
+
+    align-content: center;
+  }
+  h1,form{
+    border: 2px dashed lawngreen;
+    text-align: center;
+  }
+  .submit{
+    background-color: green;
+
+  }
+  button{
+    background-color:red;
+  }
+</style>
+
+<script>
+function validateForm() {
+  let x = document.forms["myForm"]["fname"].value;
+
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  let y = document.forms["myForm"]["lname"].value;
+  if (y == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+  let a = document.forms["myForm"]["password"].value;
+  if (a == "") {
+    alert("password must be filled out");
+    return false;
+  }
+  let b = document.forms["myForm"]["email"].value;
+  if (b == "") {
+    alert("email must be filled out");
+    return false;
+  }
+  let c = document.forms["myForm"]["phone"].value;
+  if (c == "") {
+    alert("phone number must be filled out");
+    return false;
+  }
+  let d = document.forms["myForm"]["photo"].value;
+  if (d == "") {
+    alert("photo must be filled out");
+    return false;
+  }
+  let e = document.forms["myForm"]["DOB"].value;
+  if (e == "") {
+    alert("DOB must be filled out");
+    return false;
+  }
+  let f = document.forms["myForm"]["gender"].value;
+  if (f == "") {
+    alert("gender must be filled out");
+    return false;
+  }
+  let g = document.forms["myForm"]["quli"].value;
+  if (g == "") {
+    alert("quli must be filled out");
+    return false;
+  }
+   let h = document.forms["myForm"]["check"];
+ 
+  if (h.checked==false) {
+    alert("accpt this");
+    return false;
+  }
+}
+</script>
+
+
+<body>
+  <span><h1>DATA</h1>
+<form name="myForm"  onsubmit="return validateForm()">
+  <label for="fname">First name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="enter First name"><br><br>
+
+  <label for="lname">Last name:</label><br>
+  <input type="text" id="lname" name="lname" placeholder="enter  last name"><br><br>
+
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" placeholder="enter password"><br><br>
+
+  <label for="email">Email:</label><br>
+  <input type="email" id="email" name="email" placeholder="enter mail address"><br><br>
+
+  <label for="phone">Phone:</label><br>
+  <input type="text" id="phone" name="phone" maxlength="10" placeholder="enter phone number"><br><br>
+
+  <label for="photo">Photo:</label><br>
+  <input type="file" id="photo" name="photo"><br><br>
+
+  <label for="DOB">DOB:</label><br>
+  <input type="date" id="DOB" name="DOB"><br><br>
+
+  <label for="gender">Gender:</label><br>
+  <input type="radio" id="gender" name="gender">Male &nbsp&nbsp
+  <input type="radio" id="gender" name="gender">Female<br><br>
+
+  <label for="qulification">Qualification:</label><br>
+  <select name="quli" id="gi">
+  <option selected="selected" value="" disabled>select</option>
+  <option value="btech">B Tech</option>
+  <option value="degree">degree</option>
+  <option value="12th">12th</option>
+  <option value="10th">10th</option>
+  </select><br><br>
+
+  <input type="checkbox"  value="" name="check">I accept all the conditions<br><br>
+  <input type="submit" value="submit" class="submit">
+  <button type="submit">cancel</button>
+</form>
+</span>
+
+</body>
